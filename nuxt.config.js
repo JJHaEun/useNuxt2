@@ -11,14 +11,37 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: '/SBGrid/css/SBGrid_Lightblue.css',
+      },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: '/SBGrid/css/SBGrid_Lightblue_Default.css',
+      },
+    ],
+    script: [
+      { src: './SBGrid/SBGrid_Lib.js', type: 'text/javascript' },
+      { src: './static/SBGrid/SBGrid_min.js', type: 'text/javascript' },
+      { src: './static/SBpath.js', type: 'text/javascript' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: './static/SBGrid/css/SBGrid_Lightblue_Default.css', ssr: false },
+    { src: './static/SBGrid/css/SBGrid_Lightblue.css', ssr: false },
+    { src: './SBGrid/SBGrid_Lib.js', ssr: false },
+    { src: './static/SBGrid/SBGrid_min.js', ssr: false },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
