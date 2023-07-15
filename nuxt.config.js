@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'useNuxt',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ko',
     },
     meta: [
       { charset: 'utf-8' },
@@ -26,9 +26,12 @@ export default {
       },
     ],
     script: [
-      { src: './SBGrid/SBGrid_Lib.js', type: 'text/javascript' },
-      { src: './static/SBGrid/SBGrid_min.js', type: 'text/javascript' },
-      { src: './static/SBpath.js', type: 'text/javascript' },
+      {
+        src: '/SBpath.js',
+        type: 'text/javascript',
+      },
+      { src: '/SBGrid/SBGrid_Lib.js', type: 'text/javascript' },
+      { src: '/SBGrid/SBGrid_min.js', type: 'text/javascript' },
     ],
   },
 
@@ -39,7 +42,7 @@ export default {
   plugins: [
     { src: './static/SBGrid/css/SBGrid_Lightblue_Default.css', ssr: false },
     { src: './static/SBGrid/css/SBGrid_Lightblue.css', ssr: false },
-    { src: './SBGrid/SBGrid_Lib.js', ssr: false },
+    { src: './static/SBGrid/SBGrid_Lib.js', ssr: false },
     { src: './static/SBGrid/SBGrid_min.js', ssr: false },
   ],
 
